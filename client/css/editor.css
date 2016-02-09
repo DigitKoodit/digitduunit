@@ -36,7 +36,7 @@ font-family: 'Monda', sans-serif;
 }
 
 .editorFeature{
-  text-align: left;
+  text-align: center;
   display: inline-block;
   width: 40%;
 }
@@ -53,6 +53,13 @@ font-family: 'Monda', sans-serif;
   border-radius: 2px;
   padding: 10px;
   background-color: #03A9F4;
+  -webkit-box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.43);
+  -moz-box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.43);
+  box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.43);
+}
+
+.jobForm button:hover{
+  color: white;
 }
 .jobEditor textarea{
   border-radius: 2px;
@@ -68,9 +75,6 @@ font-family: 'Monda', sans-serif;
   height: 100%;
 }
 
-.previewWindow h2, h3{
-  margin:1em;
-}
 
 .jobVar{
   list-style: none;

@@ -22,6 +22,11 @@ MainComponent = React.createClass({
   render(){
     return(
       <div className="mainContainer">
+        <h1>DigitDuunit</h1>
+        <p> Digitin hallitus päivittää tälle sivulle hallitukselle 
+            sähköpostitse saapuvat työpaikkailmoitukset. Ilmoitukset
+            poistuvat automaattisesti viimeisen päivämäärän täytyttyä.
+            </p>
         <h2>Tarjolla olevia töitä:</h2>
         <ul>
           {this.renderJobsList()}

@@ -13,7 +13,7 @@ body{
 }
 .headerBar{
   background-color: #212121;
-  font-family: 'Oleo Script', cursive;
+  font-family: 'Philosopher', sans-serif;
   color: #B3E5FC;
   top: 0px;
   left: 0px;
@@ -41,10 +41,10 @@ body{
 
 .loginButton{
   position: fixed;
-  font-family: 'Monda', sans-serif;
+  font-family: 'Muli', sans-serif;
   margin: 0px;
   top: 1em;
-  right: 1em;
+  right: 8em;
   clear: left;
 }
 

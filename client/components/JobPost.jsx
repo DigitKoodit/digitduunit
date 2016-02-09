@@ -16,8 +16,9 @@ JobPost = React.createClass({
         <div className="descriptionHeader">
         <h1>{this.data.job.name}</h1>
         <ul>
-          <li>{this.data.job.type}</li>
-          <li>{this.data.job.deadline}</li>
+          <li>Tyyppi: {this.data.job.type}</li>
+          <li>Hakemuksen deadline: {this.data.job.deadline}</li>
+          <li>Työn sijainti: {this.data.job.location}</li>
         </ul>
         </div>
         <div className="descriptionContent">

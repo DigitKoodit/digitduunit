@@ -78,6 +78,7 @@ NewPostingComponent = React.createClass({
           <ul>
             <li className="jobVar">Työn tyyppi: {this.state.type}</li>
             <li className="jobVar">Haun deadline: {this.state.deadline}</li>
+            <li className="jobVar">Sijainti: {this.state.location}</li>
           </ul>
           <h3>Kuvaus</h3>
           <div className="previewHTML" dangerouslySetInnerHTML={this.rawMarkup()}/>

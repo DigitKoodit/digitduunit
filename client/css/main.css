@@ -12,15 +12,20 @@
 }
 
 li{
-  font-family: 'Monda', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 h3, h4, p{
-  font-family: 'Monda', sans-serif;
+  font-family: 'Muli', sans-serif;
+  margin: 0.5em;
+  margin-left: 1em;
 }
 
 h1, h2{
-  font-family: 'Fugaz One', cursive;
+  font-family: 'Philosopher', sans-serif;
+  margin: 0.5em;
+  margin-left: 1em;
+  
 }
 
 .descriptionHeader{
