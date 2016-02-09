@@ -12,7 +12,7 @@ JobPost = React.createClass({
   render(){
     console.log(this.data.job)
     return(
-      <div className="jobDiv">
+      <div className="mainContainer">
         <div className="descriptionHeader">
         <h1>{this.data.job.name}</h1>
         <ul>

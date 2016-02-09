@@ -4,7 +4,8 @@ NewPostingComponent = React.createClass({
       description: "",
       name: "Työn nimi",
       type: "",
-      deadline: ""
+      deadline: "",
+      location: "",
     }
   },
   addToJobs(){
@@ -12,7 +13,8 @@ NewPostingComponent = React.createClass({
       name: this.state.name,
       type: this.state.type,
       deadline: this.refs.datePicker.getDate(),
-      description: this.state.description
+      description: this.state.description,
+      location: this.state.location
     }
     console.log(this.refs.datePicker.getDate());
 
@@ -33,6 +35,10 @@ NewPostingComponent = React.createClass({
     event.preventDefault();
     this.setState({type: event.target.value})
   },
+  onChangeLocation(event){
+    event.preventDefault();
+    this.setState({location: event.target.value})
+  },
   rawMarkup(){
     return{ __html: this.state.description}
   },
@@ -49,6 +55,10 @@ NewPostingComponent = React.createClass({
               <li className="editorFeature">
               <h4>Paikan Tyyppi</h4>
               <input onChange={this.onChangeType} type="text" ref="jobType" placeholder="Rooli yrityksessä"/>
+              </li>
+              <li className="editorFeature">
+              <h4>Sijainti</h4>
+              <input onChange={this.onChangeLocation} type="text" ref="jobType" placeholder="Sijainti"/>
               </li>
               <li className="editorFeature">
               <h4>Haun deadline</h4>

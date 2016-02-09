@@ -29,6 +29,16 @@ body{
   float: left;
   width: 50%;
 }
+
+.headerBar a{
+  color: #B3E5FC;
+  text-decoration: none;
+}
+
+.headerBar a:hover{
+  color: white;
+}
+
 .loginButton{
   position: fixed;
   font-family: 'Monda', sans-serif;

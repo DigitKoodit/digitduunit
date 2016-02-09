@@ -21,6 +21,7 @@ Meteor.methods({
       name: item.name,
       createdAt: new Date(),
       owner: Meteor.userId(),
+      location: item.location,
       type: item.type,
       deadline: item.deadline,
       description: item.description

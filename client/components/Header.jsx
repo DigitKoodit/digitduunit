@@ -8,7 +8,7 @@ Header = React.createClass({
   render(){
     return(
       <div className="headerBar">
-        <h3> DigitDuunit - Töitä teekkarille</h3>
+        <h3> <a href="/">DigitDuunit - Töitä teekkarille</a></h3>
         <LoginView />
       </div>
     );

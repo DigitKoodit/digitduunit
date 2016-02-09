@@ -1,0 +1,44 @@
+.mainContainer{
+  width: 70%;
+  min-width: 800px;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1em;
+  border-radius: 2px;
+  -webkit-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.13);
+  -moz-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.13);
+  box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.13);
+}
+
+li{
+  font-family: 'Monda', sans-serif;
+}
+
+h3, h4, p{
+  font-family: 'Monda', sans-serif;
+}
+
+h1, h2{
+  font-family: 'Fugaz One', cursive;
+}
+
+.descriptionHeader{
+  min-width: 600px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px #B3E5FC solid;
+
+}
+
+.descriptionHeader h1{
+  text-align: center;
+}
+
+.descriptionContent{
+  min-width: 600px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
