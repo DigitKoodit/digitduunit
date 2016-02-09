@@ -6,9 +6,9 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/new', {
-  name: "newEvent",
+  name: "new_job",
   action: function(){
-    Meteor.user() ? ReactLayout.render(AppRoot, {yield: <MainComponent />}) : console.log("Need to log in as admin to create events.");
+    Meteor.userId() ? ReactLayout.render(AppRoot, {yield: <NewPostingComponent/> }) : ReactLayout.render(AppRoot, {yield: <ErrorView error="Kirjaudu sisään lisätäksesi tapahtumia." />}) ;
   }
 });
 
@@ -19,4 +19,4 @@ FlowRouter.route('/jobs/:jobId', {
     Meteor.user() ? ReactLayout.render(AppRoot, {yield: <MainComponent />}) : console.log("Need to log in to view events.");
 
   }
-})
+});
