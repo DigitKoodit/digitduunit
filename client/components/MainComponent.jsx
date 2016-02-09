@@ -14,6 +14,7 @@ MainComponent = React.createClass({
     }
 
     return this.data.jobs.map((job) => {
+      console.log(job);
       return <ListJob key={job.id} job={job}/>
     });
 

@@ -8,7 +8,7 @@ LoginView = React.createClass({
   },
   render(){
     return (
-      <div>
+      <div className="loginButton">
       <span ref="container"/>
       </div>
     );

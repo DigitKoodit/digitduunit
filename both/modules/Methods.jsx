@@ -3,10 +3,19 @@ if(Meteor.isClient){
 }
 
 Meteor.methods({
+  parseMarkdown(markdown){
+    let reader = new CommonMark.Parser();
+    let writer = new CommonMark.HtmlRenderer();
+
+    let parsed = reader.parse(markdown);
+    return writer.render(parsed);
+  },
+
   addTask(item){
     if(! Meteor.userId()){
       throw new Meteor.error("User not logged in");
     }
+    console.log("Inserting: " + item);
 
     Jobs.insert({
       name: item.name,
