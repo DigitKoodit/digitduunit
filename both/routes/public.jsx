@@ -12,7 +12,7 @@ FlowRouter.route('/new', {
     if(!Meteor.user()){
       ReactLayout.render(AppRoot, {yield: <MainComponent />});
     }else{
-      Meteor.user().roles.indexOf('admin') != -1 ? ReactLayout.render(AppRoot, {yield: <NewPostingComponent/> }) : ReactLayout.render(AppRoot, {yield: <ErrorView error="Kirjaudu sisään lisätäksesi ilmoituksia." />}) ;
+      Meteor.user().roles.indexOf('admin') != -1 ? ReactLayout.render(AppRoot, {yield: <JobEditor/> }) : ReactLayout.render(AppRoot, {yield: <ErrorView error="Kirjaudu sisään lisätäksesi ilmoituksia." />}) ;
     }
   }
 });

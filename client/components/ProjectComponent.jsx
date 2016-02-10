@@ -30,7 +30,7 @@ ProjectComponent = React.createClass({
     console.log("Rendering projectlist")
     return(
       <div>
-        <div className="inactiveTab" onClick={() => this.props.changeList()}>Työt</div>
+        <div className="inactiveTab" onClick={() => this.props.changeList()}><a href="#">Työt</a></div>
         <div className="activeTab">Projektit</div>
         <div className="mainContainer">
           <h1>DigitDuunit - Yliopiston sisäiset projektit {this.checkUserStatus()}</h1>

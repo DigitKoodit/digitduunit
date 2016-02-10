@@ -1,19 +1,30 @@
 if(Meteor.isClient){
   Meteor.subscribe("jobs");
+  Meteor.subscribe("projects");
 }
 
 Meteor.methods({
-  parseMarkdown(markdown){
-    let reader = new CommonMark.Parser();
-    let writer = new CommonMark.HtmlRenderer();
 
-    let parsed = reader.parse(markdown);
-    return writer.render(parsed);
+  //Method to be called to add items to projects list
+  addProject(item){
+    if(! Meteor.userId()){
+      throw new Meteor.error("User not logged in.")
+    }
+    console.log("Inserting project: " + item);
+
+    Projects.insert({
+      name: item.name,
+      createdAt: new Date(),
+      owner: Meteor.userId(),
+      projectLead: item.projectLead,
+      description: item.description
+    });
   },
 
-  addTask(item){
+  //Method to be called to add items to jobs list.
+  addJob(item){
     if(! Meteor.userId()){
-      throw new Meteor.error("User not logged in");
+      throw new Meteor.error("User not logged in.");
     }
     console.log("Inserting: " + item);
 

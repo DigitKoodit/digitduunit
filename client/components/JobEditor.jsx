@@ -1,4 +1,4 @@
-NewPostingComponent = React.createClass({
+JobEditor = React.createClass({
   getInitialState(){
     return{
       description: "",
@@ -17,7 +17,7 @@ NewPostingComponent = React.createClass({
       location: this.state.location
     }
 
-    Meteor.call("addTask", job);
+    Meteor.call("addJob", job);
     window.location.href="/";
   },
   onChangeDate(){
