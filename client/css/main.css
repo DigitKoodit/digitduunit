@@ -1,6 +1,5 @@
 .mainContainer{
   width: 100%;
-  min-width: 800px;
   background-color: white;
   margin-right: auto;
   margin-left: auto;
@@ -8,15 +7,17 @@
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
-
+  min-height: 400px;
   -webkit-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
--moz-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
+  -moz-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
+  box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
 }
 
 .paperContainer{
   font-family: 'Muli', sans-serif;
   width: 70%;
+  min-width: 800px;
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 2px;
@@ -59,17 +60,43 @@ h1, h2{
   margin-right: auto;
 }
 
+.jobsTab{
+  background-color: #03A9F4;
+  color: white;
+}
+.projectsTab{
+  background-color: #F44336;
+  color: white;
+
+}
+
+.jobsTab a{
+  color: white;
+  text-decoration: none;
+}
+
+.projectsTab a{
+  color: white;
+  text-decoration: none;
+}
+
+.jobH1{
+  color: #03A9F4;
+}
+
+.projectH1{
+  color: #F44336;
+}
+
 .activeTab{
   padding-right: .5em;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  color: #0288D1;
   width: 6em;
   height: 2em;
   left: 0px;
-  background-color: white;
-  border-top-right-radius: 2em;
+  border-top-right-radius: .5em;
   border-top-left-radius: .5em;
 }
 
@@ -78,23 +105,21 @@ h1, h2{
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  background-color: white;
-  color: #0288D1;
   width: 6em;
-  height: 2em;
-  border-top-right-radius: 2em;
+  height: .5em;
+  border-top-right-radius: .5em;
   border-top-left-radius: .5em;
-  -webkit-box-shadow: inset -8px -58px 22px -46px rgba(0,0,0,0.02);
-  -moz-box-shadow: inset -8px -58px 22px -46px rgba(0,0,0,0.02);
-  box-shadow: inset -8px -58px 22px -46px rgba(0,0,0,0.02);
+  -webkit-box-shadow: inset -8px -58px 14px -59px rgba(0,0,0,0.42);
+  -moz-box-shadow: inset -8px -58px 14px -59px rgba(0,0,0,0.42);
+  box-shadow: inset -8px -58px 14px -59px rgba(0,0,0,0.42);
 }
 
-.paperContainer a{
+.mainContainer a{
   text-decoration: none;
   color: #0288D1;
 }
 
-.paperContainer a:hover{
+.mainContainer a:hover{
   color: #B3E5FC;
 }
 

@@ -29,10 +29,10 @@ JobsComponent = React.createClass({
   render(){
     return(
       <div>
-        <div className="activeTab">Työt</div>
-        <div className="inactiveTab" onClick={() => this.props.changeList()}><a href="#">Projektit</a></div>
+        <div className="activeTab jobsTab">Työt</div>
+        <div className="inactiveTab projectsTab" onClick={() => this.props.changeList()}><a href="#">Projektit</a></div>
         <div className="mainContainer">
-          <h1>DigitDuunit - Työpaikkailmoitukset {this.checkUserStatus()}</h1>
+          <h1 className="jobH1">DigitDuunit - Työpaikkailmoitukset {this.checkUserStatus()}</h1>
           <p> Digitin hallitus päivittää tälle sivulle hallitukselle 
               sähköpostitse saapuvat työpaikkailmoitukset. Ilmoitukset
               poistuvat automaattisesti viimeisen päivämäärän täytyttyä.
