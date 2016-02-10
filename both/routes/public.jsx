@@ -8,7 +8,12 @@ FlowRouter.route('/', {
 FlowRouter.route('/new', {
   name: "new_job",
   action: function(){
-    Meteor.userId() ? ReactLayout.render(AppRoot, {yield: <NewPostingComponent/> }) : ReactLayout.render(AppRoot, {yield: <ErrorView error="Kirjaudu sisään lisätäksesi ilmoituksia." />}) ;
+    console.log(Meteor.user());
+    if(!Meteor.user()){
+      ReactLayout.render(AppRoot, {yield: <MainComponent />});
+    }else{
+      Meteor.user().roles.indexOf('admin') != -1 ? ReactLayout.render(AppRoot, {yield: <NewPostingComponent/> }) : ReactLayout.render(AppRoot, {yield: <ErrorView error="Kirjaudu sisään lisätäksesi ilmoituksia." />}) ;
+    }
   }
 });
 

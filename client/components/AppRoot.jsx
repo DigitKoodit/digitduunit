@@ -7,6 +7,7 @@ AppRoot = React.createClass({
       <div className="appContainer">
         <Header />
         {this.props.yield}
+        <Copyright />
       </div>
     );
   }

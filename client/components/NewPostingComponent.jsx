@@ -16,15 +16,17 @@ NewPostingComponent = React.createClass({
       description: this.state.description,
       location: this.state.location
     }
-    console.log(this.refs.datePicker.getDate());
 
     Meteor.call("addTask", job);
     window.location.href="/";
   },
+  onChangeDate(){
+    this.setState({deadline: this.refs.datePicker.getDate()})
+    console.log(this.refs.datePicker.getDate());
+  },
   onChangeText(event){
     event.preventDefault();
     let preview = parseMarkdown(event.target.value);
-    console.log(preview);
     this.setState({description: preview});
   },
   onChangeName(event){
@@ -62,7 +64,7 @@ NewPostingComponent = React.createClass({
               </li>
               <li className="editorFeature">
               <h4>Haun deadline</h4>
-              <DatePicker ref="datePicker"/>
+              <DatePicker ref="datePicker" onClick={() => this.onChangeDate()}/>
               </li>
             </ul>
           </form>
