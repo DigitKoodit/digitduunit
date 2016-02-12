@@ -1,8 +1,10 @@
 JobsComponent = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData(){
+    let date = new Date().getTime();
+    console.log(date);
     return{
-      jobs: Jobs.find({createdAt: {$lt: new Date()} }, {sort: {createdAt: -1}}).fetch(),
+      jobs: Jobs.find({deadline: {$gte: new Date().getTime()} }, {sort: {deadline: -1}}).fetch(),
       currentUser: Meteor.user()
     }
   },

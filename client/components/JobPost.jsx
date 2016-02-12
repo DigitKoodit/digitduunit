@@ -1,23 +1,28 @@
 JobPost = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData(){
-    console.log(this.props.id.jobId)
     return{
       job: Jobs.findOne({_id: this.props.id.jobId})
     }
   },
+  getInitalState(){
+    return {date: new Date(this.data.job.deadline)}
+  },
   rawMarkup(){
     return{ __html: this.data.job.description}
   },
+  getDate(){
+    let date = new Date(this.data.job.deadline);
+    return date.getDate()+'.'+date.getMonth()+'.'+date.getFullYear();
+  },
   render(){
-    console.log(this.data.job)
     return(
-      <div className="mainContainer">
+      <div className="jobContainer">
         <div className="descriptionHeader">
         <h1>{this.data.job.name}</h1>
         <ul>
           <li>Tyyppi: {this.data.job.type}</li>
-          <li>Hakemuksen deadline: {this.data.job.deadline}</li>
+          <li>Hakemuksen deadline: {this.getDate()}</li>
           <li>Työn sijainti: {this.data.job.location}</li>
         </ul>
         </div>

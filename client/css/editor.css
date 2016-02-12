@@ -74,6 +74,9 @@ font-family: 'Monda', sans-serif;
   width: 50%;
   height: 100%;
 }
+.preview{
+  margin: 1em;
+}
 
 
 .jobVar{

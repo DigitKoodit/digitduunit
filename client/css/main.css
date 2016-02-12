@@ -23,20 +23,35 @@
   border-radius: 2px;
 }
 
+.jobContainer{
+  background-color: white;
+  min-height: 400px;
+  width: 70%;
+  padding: 1em;
+  min-width: 800px;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
+  -moz-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
+  box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
+}
+
 li{
   font-family: 'Muli', sans-serif;
 }
 
 h3, h4, p{
   font-family: 'Muli', sans-serif;
-  margin: 0.5em;
-  margin-left: 1em;
+  margin: .5em;
+  margin-left: 0em;
 }
 
 h1, h2{
   font-family: 'Philosopher', sans-serif;
-  margin: 0.5em;
-  margin-left: 1em;
+  margin: .5em;
+  margin-left: 0em;
   
 }
 

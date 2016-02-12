@@ -8,11 +8,22 @@ JobEditor = React.createClass({
       location: "",
     }
   },
+  produceDate(){
+    let dlDate = this.state.deadline.split('.');
+    return new Date(dlDate[2],dlDate[1]-1, dlDate[0]).getTime();
+  },
   addToJobs(){
+    if(this.state.deadline.length != 10){
+      alert("Päivämäärä on väärässä formaatista, oikea formaatti on dd.mm.yyyy");
+      return;
+    }
+
+    let dlDate = this.produceDate();
+    console.log(dlDate);
     let job = {
       name: this.state.name,
       type: this.state.type,
-      deadline: this.refs.datePicker.getDate(),
+      deadline: dlDate,
       description: this.state.description,
       location: this.state.location
     }
@@ -20,9 +31,9 @@ JobEditor = React.createClass({
     Meteor.call("addJob", job);
     window.location.href="/";
   },
-  onChangeDate(){
-    this.setState({deadline: this.refs.datePicker.getDate()})
-    console.log(this.refs.datePicker.getDate());
+  onChangeDate(event){
+    event.preventDefault();
+    this.setState({deadline: event.target.value});
   },
   onChangeText(event){
     event.preventDefault();
@@ -63,8 +74,8 @@ JobEditor = React.createClass({
               <input onChange={this.onChangeLocation} type="text" ref="jobType" placeholder="Sijainti"/>
               </li>
               <li className="editorFeature">
-              <h4>Haun deadline</h4>
-              <DatePicker ref="datePicker" onClick={() => this.onChangeDate()}/>
+              <h4>DL (dd.kk.yyyy)</h4>
+              <input ref="datePicker" type="text" placeholder="dd.kk.yyyy" onChange={this.onChangeDate}/>
               </li>
             </ul>
           </form>
@@ -76,6 +87,7 @@ JobEditor = React.createClass({
         </div>
 
         <div className="previewWindow">
+          <div className="preview">
           <h2>{this.state.name}</h2>
           <ul>
             <li className="jobVar">Työn tyyppi: {this.state.type}</li>
@@ -84,6 +96,7 @@ JobEditor = React.createClass({
           </ul>
           <h3>Kuvaus</h3>
           <div className="previewHTML" dangerouslySetInnerHTML={this.rawMarkup()}/>
+          </div>
         </div>
 
       </div>
