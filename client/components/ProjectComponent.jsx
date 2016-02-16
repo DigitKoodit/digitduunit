@@ -23,7 +23,7 @@ ProjectComponent = React.createClass({
       return;
     }
     if(Meteor.user().roles.indexOf('admin') != -1){
-        return <a className="addNew" href="/new">+</a>;
+        return <a className="addNew" href="#">+</a>;
     }  
   },
   render(){

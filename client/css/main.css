@@ -129,13 +129,18 @@ h1, h2{
   box-shadow: inset -8px -58px 14px -59px rgba(0,0,0,0.42);
 }
 
-.mainContainer a{
+.jobLink a{
   text-decoration: none;
   color: #0288D1;
 }
 
-.mainContainer a:hover{
+.jobLink a:hover{
   color: #B3E5FC;
+}
+
+.addNew{
+  color: black;
+  text-decoration: none;
 }
 
 .copyRight{
