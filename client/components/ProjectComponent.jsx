@@ -2,7 +2,7 @@ ProjectComponent = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData(){
     return{
-      projects: Meteor.Collections.Projects.find({createdAt: {$lt: new Date()} }, {sort: {createdAt: -1}}).fetch(),
+      projects: DigitDuunit.Collections.Projects.find({createdAt: {$lt: new Date()} }, {sort: {createdAt: -1}}).fetch(),
       currentUser: Meteor.user()
     }
   },

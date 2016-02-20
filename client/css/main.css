@@ -52,7 +52,7 @@ h1, h2{
   font-family: 'Philosopher', sans-serif;
   margin: .5em;
   margin-left: 0em;
-  
+
 }
 
 .descriptionHeader{
@@ -127,6 +127,14 @@ h1, h2{
   -webkit-box-shadow: inset -8px -58px 14px -59px rgba(0,0,0,0.42);
   -moz-box-shadow: inset -8px -58px 14px -59px rgba(0,0,0,0.42);
   box-shadow: inset -8px -58px 14px -59px rgba(0,0,0,0.42);
+}
+
+.inactiveTab a{
+  opacity: 0.5;
+}
+
+.inactiveTab a:hover{
+  opacity: 1;
 }
 
 .jobLink a{

@@ -14,7 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
   api.use('jijraj:core');
-  api.use('react');
+  api.use('aldeed:collection2');
   api.addFiles('configuration.js');
   api.addFiles('collections.js');
 });

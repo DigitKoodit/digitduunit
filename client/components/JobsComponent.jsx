@@ -4,7 +4,7 @@ JobsComponent = React.createClass({
     let date = new Date().getTime();
     console.log(date);
     return{
-      jobs: Meteor.Collections.Jobs.find({deadline: {$gte: new Date().getTime()} }, {sort: {deadline: -1}}).fetch(),
+      jobs: DigitDuunit.Collections.Jobs.find({deadline: {$gte: new Date().getTime()} }, {sort: {deadline: -1}}).fetch(),
       currentUser: Meteor.user()
     }
   },

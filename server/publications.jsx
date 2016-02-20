@@ -1,3 +1,7 @@
 Meteor.publish("jobs", function(){
-  return Jobs.find();
+  return DigitDuunit.Collections.Jobs.find();
+});
+
+Meteor.publish('projects', function(){
+  return DigitDuunit.Collections.Projects.find();
 })
