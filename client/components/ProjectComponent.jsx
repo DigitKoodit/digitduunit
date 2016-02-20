@@ -2,7 +2,7 @@ ProjectComponent = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData(){
     return{
-      projects: Projects.find({createdAt: {$lt: new Date()} }, {sort: {createdAt: -1}}).fetch(),
+      projects: Meteor.Collections.Projects.find({createdAt: {$lt: new Date()} }, {sort: {createdAt: -1}}).fetch(),
       currentUser: Meteor.user()
     }
   },
@@ -24,7 +24,7 @@ ProjectComponent = React.createClass({
     }
     if(Meteor.user().roles.indexOf('admin') != -1){
         return <a className="addNew" href="#">+</a>;
-    }  
+    }
   },
   render(){
     console.log("Rendering projectlist")
@@ -34,7 +34,7 @@ ProjectComponent = React.createClass({
         <div className="activeTab projectsTab">Projektit</div>
         <div className="mainContainer">
           <h1 className="projectH1">DigitDuunit - Yliopiston sisäiset projektit {this.checkUserStatus()}</h1>
-          <p> Tälle sivulle on oletettavissa yliopiston sisäisiä projekteja opiskelijavoimin toteutettaviksi. 
+          <p> Tälle sivulle on oletettavissa yliopiston sisäisiä projekteja opiskelijavoimin toteutettaviksi.
               Projekteja toteuttaville opiskelijoille on tarjolla opintopisteiden lisäksi rahallista korvausta toteuteusta työstä, projektista riippuen.</p>
           <h2>Tarjolla olevia projekteja:</h2>
           <ul>

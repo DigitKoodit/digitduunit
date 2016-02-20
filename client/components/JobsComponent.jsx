@@ -4,7 +4,7 @@ JobsComponent = React.createClass({
     let date = new Date().getTime();
     console.log(date);
     return{
-      jobs: Jobs.find({deadline: {$gte: new Date().getTime()} }, {sort: {deadline: -1}}).fetch(),
+      jobs: Meteor.Collections.Jobs.find({deadline: {$gte: new Date().getTime()} }, {sort: {deadline: -1}}).fetch(),
       currentUser: Meteor.user()
     }
   },
@@ -35,7 +35,7 @@ JobsComponent = React.createClass({
         <div className="inactiveTab projectsTab" onClick={() => this.props.changeList()}><a href="#">Projektit</a></div>
         <div className="mainContainer">
           <h1 className="jobH1">DigitDuunit - Työpaikkailmoitukset {this.checkUserStatus()}</h1>
-          <p> Digitin hallitus päivittää tälle sivulle hallitukselle 
+          <p> Digitin hallitus päivittää tälle sivulle hallitukselle
               sähköpostitse saapuvat työpaikkailmoitukset. Ilmoitukset
               poistuvat automaattisesti viimeisen päivämäärän täytyttyä.
               </p>

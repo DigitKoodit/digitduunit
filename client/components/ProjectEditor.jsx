@@ -98,7 +98,6 @@ JobEditor = React.createClass({
           // <div className="previewHTML" dangerouslySetInnerHTML={this.rawMarkup()}/>
           // </div>
           <EditorPreviewWindow markup={this.rawMarkup()} />
-          
         </div>
 
       </div>
