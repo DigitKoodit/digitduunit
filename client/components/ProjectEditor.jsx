@@ -88,16 +88,14 @@ JobEditor = React.createClass({
 
         <div className="previewWindow">
           <div className="preview">
-          <h2>{this.state.name}</h2>
-          <ul>
-            <li className="jobVar">Työn tyyppi: {this.state.type}</li>
-            <li className="jobVar">Haun deadline: {this.state.deadline}</li>
-            <li className="jobVar">Sijainti: {this.state.location}</li>
-          </ul>
-          // <h3>Kuvaus</h3>
-          // <div className="previewHTML" dangerouslySetInnerHTML={this.rawMarkup()}/>
-          // </div>
-          <EditorPreviewWindow markup={this.rawMarkup()} />
+            <h2>{this.state.name}</h2>
+            <ul>
+              <li className="jobVar">Työn tyyppi: {this.state.type}</li>
+              <li className="jobVar">Haun deadline: {this.state.deadline}</li>
+              <li className="jobVar">Sijainti: {this.state.location}</li>
+            </ul>
+            <EditorPreviewWindow markup={this.rawMarkup()} />
+          </div>
         </div>
 
       </div>
