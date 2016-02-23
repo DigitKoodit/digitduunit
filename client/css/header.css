@@ -9,12 +9,12 @@ body{
   height: 100%;
 }
 .appContainer{
-  margin-top: 10em; 
+  margin-top: 10em;
 }
 .headerBar{
-  background-color: #212121;
+  background-color: #1e2022;
   font-family: 'Philosopher', sans-serif;
-  color: #0288D1;
+  color: #45d9fd;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -34,7 +34,7 @@ body{
 }
 
 .headerBar a{
-  color: #0288D1;
+  color: #4ea1d3;
   text-decoration: none;
 }
 
@@ -54,4 +54,3 @@ body{
 .loginButton a{
   text-decoration: none;
 }
-
