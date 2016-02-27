@@ -16,7 +16,7 @@ JobsComponent = React.createClass({
 
     return this.data.jobs.map((job, i) => {
       console.log(job);
-      return <ListJob key={job._id} job={job}/>
+      return <ListJob key={job._id} job={job} secondary={"Sijainti: "+job.location}/>
     });
 
   },

@@ -5,3 +5,5 @@ Meteor.publish("jobs", function(){
 Meteor.publish('projects', function(){
   return DigitDuunit.Collections.Projects.find();
 })
+//
+// // Write your package code here!

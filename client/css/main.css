@@ -22,6 +22,9 @@
   margin-right: auto;
   margin-left: auto;
   border-radius: 2px;
+  -webkit-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
+  -moz-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
+  box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
 }
 
 .jobContainer{
@@ -33,9 +36,6 @@
   margin-right: auto;
   margin-left: auto;
   border-radius: 2px;
-  -webkit-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
-  -moz-box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
-  box-shadow: 10px 20px 15px -5px rgba(0,0,0,0.13);
 }
 
 li{

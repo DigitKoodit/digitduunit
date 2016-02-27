@@ -1,4 +1,4 @@
-JobPost = React.createClass({
+ProjectPost = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData(){
     return{

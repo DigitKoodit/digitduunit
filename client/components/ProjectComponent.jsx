@@ -1,9 +1,11 @@
 ProjectComponent = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData(){
+    let date = new Date().getTime();
     return{
-      projects: DigitDuunit.Collections.Projects.find({createdAt: {$lt: new Date()} }, {sort: {createdAt: -1}}).fetch(),
-      currentUser: Meteor.user()
+        projects: DigitDuunit.Collections.Projects.find({deadline: {$gte: new Date().getTime()} }, {sort: {deadline: -1}}).fetch(),
+        currentUser: Meteor.user()
+
     }
   },
   renderJobsList(){
@@ -14,7 +16,7 @@ ProjectComponent = React.createClass({
 
     return this.data.projects.map((job) => {
       console.log(job);
-      return <ListJob key={job.id} job={job}/>
+      return <ListJob key={job._id} job={job} secondary={"Vastuuhenkilö: "+job.projectLead}/>
     });
 
   },
@@ -23,7 +25,7 @@ ProjectComponent = React.createClass({
       return;
     }
     if(Meteor.user().roles.indexOf('admin') != -1){
-        return <a className="addNew" href="#">+</a>;
+        return <a className="addNew" href="/new_project">+</a>;
     }
   },
   render(){

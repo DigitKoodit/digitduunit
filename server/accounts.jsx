@@ -1,5 +1,5 @@
 Accounts.onCreateUser(function(options, user){
-  let userCount = Meteor.users.find({}).fetch().length
+  let userCount = Meteor.users.find({}).fetch().length;
   let roles;
   let verified = false;
 

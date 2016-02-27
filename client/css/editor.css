@@ -20,14 +20,13 @@ font-family: 'Monda', sans-serif;
 .jobEditor input{
   border: none;
   background-color: none;
-  border-bottom: 1px #B3E5FC solid;
+  border-bottom: 1px #004e66 solid;
   border-radius: 2px;
   font-family: 'Monda', sans-serif;
 }
 
 
 /*Editor css*/
-
 .jobForm{
   height: 100%;
   width: 50%;
@@ -36,9 +35,10 @@ font-family: 'Monda', sans-serif;
 }
 
 .editorFeature{
-  text-align: center;
+  text-align: left;
   display: inline-block;
   width: 40%;
+  height: 150px;
 }
 .markdownEditor{
   text-align: center;
@@ -50,16 +50,20 @@ font-family: 'Monda', sans-serif;
   width: 150px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 10px;
-  background-color: #03A9F4;
-  -webkit-box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.43);
-  -moz-box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.43);
-  box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.43);
+  background-color: #fcbe32;
+  -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.12);
+  -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.12);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.12);
 }
 
 .jobForm button:hover{
+  background-color: #ff5f2e;
   color: white;
+  -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.12);
+  -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.12);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.12);
 }
 .jobEditor textarea{
   border-radius: 2px;
@@ -69,7 +73,7 @@ font-family: 'Monda', sans-serif;
 /*Preview css*/
 .previewWindow{
   min-height: 600px;
-  background-color: #B3E5FC;
+  background-color: #e1eef6;
   float: left;
   width: 50%;
   height: 100%;

@@ -28,7 +28,7 @@ JobEditor = React.createClass({
       location: this.state.location
     }
 
-    DigitDuunit.Methods.addJob(job);
+    Meteor.call('addJob', job);
     window.location.href="/";
   },
   onChangeDate(event){
@@ -94,10 +94,8 @@ JobEditor = React.createClass({
             <li className="jobVar">Haun deadline: {this.state.deadline}</li>
             <li className="jobVar">Sijainti: {this.state.location}</li>
           </ul>
-          // <h3>Kuvaus</h3>
-          // <div className="previewHTML" dangerouslySetInnerHTML={this.rawMarkup()}/>
-          // </div>
           <EditorPreviewWindow markup={this.rawMarkup()} />
+        </div>
 
         </div>
 
